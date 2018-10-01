@@ -12,7 +12,7 @@ There are 2 ways to prepare the docker image.
 ```
 git clone https://github.com/antonyho/docker-4NXCI.git
 cd docker-4NXCI
-docker build -t antonyho/xci2nsp .
+docker build --rm -t antonyho/xci2nsp .
 ```
 
 #### Option 2. Pull the docker image from DockerHub
