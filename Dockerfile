@@ -11,3 +11,15 @@ WORKDIR /usr/src/4NXCI
 RUN /bin/bash -c "cp config.mk{.template,}"
 
 RUN make
+
+RUN mv 4nxci /usr/bin
+
+RUN mkdir -p /mnt/filedir
+
+VOLUME ["/mnt/filedir"]
+
+WORKDIR /mnt/filedir
+
+ENTRYPOINT ["4nxci"]
+
+CMD []

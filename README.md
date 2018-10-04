@@ -22,11 +22,17 @@ docker pull antonyho/xci2nsp
 
 
 ### Commands
+Suppose the file is located in your current working directory
 ```
-docker run --rm antonyho/xci2nsp [options...] <path_to_file.xci>
+docker run --rm -v ${pwd}:/mnt/filedir antonyho/xci2nsp [options...] <filename.xci>
 
 Options:  
 -k, --keyset             Set keyset filepath, default filepath is ./keys.dat  
 -h, --help               Display usage  
 --dummytik               Creates dummy tik and cert
+```
+
+If you want to specify a file path location to the XCI file and key file
+```
+docker run --rm -v <your_dir_path>:/mnt/filedir antonyho/xci2nsp [options...] <filename.xci>
 ```
